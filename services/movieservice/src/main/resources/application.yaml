@@ -1,0 +1,37 @@
+server:
+  port: 8082
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: bookingservice
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/booking_ticket?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: nghvpbm28122004
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org:
+      example:
+        user: INFO
+      springframework:
+        web: INFO
+
+# JWT
+jwt:
+  secret: ${JWT_SECRET_KEY:enhNPiN2TjlLKiJMcCE1UkBqVyYzZihCX21TNnQ/WVt1RTFxKUE0ZFhoN2dDekorVi1QMG9JOHdRL0x+eEcnew==}
+  expiration: 3600000

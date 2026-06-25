@@ -15,9 +15,9 @@ public class Theater {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
-    @Column(nullable = false, length = 150)
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false, length = 255)
